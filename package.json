@@ -14,7 +14,10 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "devhub": "sfdx force:auth:web:login --setdefaultdevhubusername --setalias DevHub",
-    "devhub:global": "sfdx force:config:set defaultdevhubusername=DevHub --global"
+    "devhub:global": "sfdx force:config:set defaultdevhubusername=DevHub --global",
+    "permset": "sfdx force:user:permset:assign --permsetname DreamHouse",
+    "apex:test": "sfdx force:apex:test:run --codecoverage --resultformat human --wait 2",
+    "data:import": "sfdx force:data:tree:import -f assets/data/Broker__c-Property__c.json"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^0.7.0",
